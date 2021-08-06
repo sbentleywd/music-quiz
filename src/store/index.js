@@ -5,7 +5,8 @@ Vue.use(Vuex)
 
 const store = new Vuex.Store({
   state: {
-    accessToken: null
+    accessToken: null,
+		expired: false
   },
   mutations: {
     setState(state, payload) {
