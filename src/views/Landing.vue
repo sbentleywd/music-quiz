@@ -3,8 +3,14 @@
 </template>
 
 <script>
-export default {};
+import spotifyUtils from "../utils/spotify";
+export default {
+  name: "Landing",
+  async mounted() {
+    const accessToken = await spotifyUtils.getAccessToken()
+    this.$store.commit('setState', { property: 'accessToken', value: accessToken})
+  }
+}
 </script>
-
 <style>
 </style>

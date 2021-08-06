@@ -4,7 +4,15 @@ import Vuex from 'vuex'
 Vue.use(Vuex)
 
 const store = new Vuex.Store({
-	strict: true
+  state: {
+    accessToken: null
+  },
+  mutations: {
+    setState(state, payload) {
+      state[payload.property] = payload.value
+    }
+  },
+  strict: true
 })
 
 export default store
