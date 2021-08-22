@@ -19,6 +19,7 @@ export default {
   methods: {
     setEra(value) {
       this.$store.commit('setState', {property: 'selectedEra', value})
+      this.$router.push('play')
     }
   }
 }
