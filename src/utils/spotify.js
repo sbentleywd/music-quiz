@@ -42,12 +42,9 @@ const spotifyUtils = {
         Authorization: `Bearer ${accessToken}`
       }
     }
-
     const response = await fetch(url, fetchOptions)
-
     const jsonReponse = await response.json()
-
-    console.log(jsonReponse)
+    return jsonReponse.items.map((item) => item.track)
   }
 }
 
