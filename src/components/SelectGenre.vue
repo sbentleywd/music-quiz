@@ -7,7 +7,6 @@
 </template>
 
 <script>
-import spotifyUtils from '../utils/spotify'
 export default {
   name: 'SelectGenre',
   computed: {
@@ -16,10 +15,7 @@ export default {
     }
   },
   methods: {
-    async getTracks() {
-      spotifyUtils.getPlaylistTracks('37i9dQZF1DX7hXnntRGfka')
-    },
-    setGenre(value) {
+    async setGenre(value) {
       this.$store.commit('setState', {property: 'selectedGenre', value})
     }
   }
